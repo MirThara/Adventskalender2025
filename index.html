@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventskalender</title>
+    <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            background: transparent;
+            pointer-events: none;
+        }
+
+        img {
+            width: auto;
+            height: 100vh;
+            position: relative;
+            z-index: 10;
+            margin: auto;
+        }
+
+        @media screen and (min-width: 1920px) {
+            img {
+                height: 100vh;
+                width: auto;
+            }
+        }
+
+        @media screen and (max-width: 1080px) {
+            img {
+                height: auto;
+                width: 100vw;
+            }
+        }
+
+        area {
+            cursor: pointer;
+        }
+
+        #resetBtn {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+            padding: 10px 20px;
+            background: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        div {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="assets/images/background.png" usemap="#image-map">
+    </div>
+
+    <map name="image-map" id="image-map">
+        <area title="day1" data-img="assets/images/1.png" data-month="12" data-day="1" onclick="play(1)"
+            coords="728,173,701,197,621,184,560,186,527,201,494,220,458,238,439,264,401,277,386,300,359,329,337,355,343,400,329,438,379,444,411,444,441,465,478,480,536,462,560,452,555,488,528,530,570,552,624,547,672,549,657,526,634,515,624,473,643,460,674,481,704,490,740,491,775,481,805,480,826,468,802,441,837,431,870,426,889,400,866,361,830,350,863,336,796,285,764,247,748,228,740,175"
+            shape="poly">
+        <area title="day2" data-img="assets/images/2.png" data-month="12" data-day="2" onclick="play(2)"
+            coords="110,941,171,931,179,892,155,840,104,831,64,885,71,922" shape="poly">
+        <area title="day3" data-img="assets/images/3.png" data-month="12" data-day="3" onclick="play(3)"
+            coords="647,811,685,805,712,760,677,708,642,694,611,705,582,748,607,802" shape="poly">
+        <area title="day4" data-img="assets/images/4.png" data-month="12" data-day="4" onclick="play(4)"
+            coords="427,914,487,903,501,854,463,794,415,775,387,789,357,847,358,900" shape="poly">
+        <area title="day5" data-img="assets/images/5.png" data-month="12" data-day="5" onclick="play(5)"
+            coords="1281,878,1341,881,1399,866,1410,827,1379,758,1328,740,1280,755,1244,816" shape="poly">
+        <area title="day6" data-img="assets/images/6.png" data-month="12" data-day="6" onclick="play(6)"
+            coords="820,986,901,963,910,915,872,854,795,856,759,914,767,968" shape="poly">
+        <area title="day7" data-img="assets/images/7.png" data-month="12" data-day="7" onclick="play(7)"
+            coords="1056,181,1244,181,1236,212,1224,241,1247,260,1233,308,1214,310,1212,269,1187,273,1147,280,1105,270,1077,253,1061,216"
+            shape="poly">
+        <area title="day8" data-img="assets/images/8.png" data-month="12" data-day="8" onclick="play(8)"
+            coords="547,846,589,840,608,802,575,743,543,727,502,742,468,791,497,849" shape="poly">
+        <area title="day9" data-img="assets/images/9.png" data-month="12" data-day="9" onclick="play(9)"
+            coords="1034,818,1066,810,1071,775,1048,729,1006,717,994,684,994,717,981,724,950,773,961,792,980,792,986,767,1003,793,1027,796"
+            shape="poly">
+        <area title="day10" data-img="assets/images/10.png" data-month="12" data-day="10" onclick="play(10)"
+            coords="335,806,370,799,383,766,354,708,338,698,304,703,278,753,311,799" shape="poly">
+        <area title="day11" data-img="assets/images/11.png" data-month="12" data-day="11" onclick="play(11)"
+            coords="969,920,1043,913,1057,867,1024,798,999,795,988,774,978,797,927,795,893,862,902,894,913,920"
+            shape="poly">
+        <area title="day12" data-img="assets/images/12.png" data-month="12" data-day="12" onclick="play(12)"
+            coords="810,804,872,802,927,792,929,759,910,710,859,705,828,710,803,758" shape="poly">
+        <area title="day13" data-img="assets/images/13.png" data-month="12" data-day="13" onclick="play(13)"
+            coords="1227,981,1289,956,1299,918,1261,844,1187,852,1147,913,1157,974" shape="poly">
+        <area title="day14" data-img="assets/images/14.png" data-month="12" data-day="14" onclick="play(14)"
+            coords="1057,175,1242,176,1236,139,1225,115,1195,84,1161,71,1119,70,1092,89,1075,105,1060,88,1005,88,1004,138,1054,134"
+            shape="poly">
+        <area title="day15" data-img="assets/images/15.png" data-month="12" data-day="15" onclick="play(15)"
+            coords="1119,878,1151,874,1160,840,1136,802,1094,802,1069,848,1084,875" shape="poly">
+        <area title="day16" data-img="assets/images/16.png" data-month="12" data-day="16" onclick="play(16)"
+            coords="167,857,199,835,205,793,174,737,122,732,88,796,100,830,156,835" shape="poly">
+        <area title="day17" data-img="assets/images/17.png" data-month="12" data-day="17" onclick="play(17)"
+            coords="281,961,349,950,357,900,318,832,282,819,229,830,190,892,202,949" shape="poly">
+        <area title="day18" data-img="assets/images/18.png" data-month="12" data-day="18" onclick="play(18)"
+            coords="745,864,807,848,815,814,788,759,757,740,714,756,680,817,692,856" shape="poly">
+        <area title="day19" data-img="assets/images/19.png" data-month="12" data-day="19" onclick="play(19)"
+            coords="620,965,681,956,699,903,658,845,626,816,585,843,552,893,555,958" shape="poly">
+        <area title="day20" data-img="assets/images/20.png" data-month="12" data-day="20" onclick="play(20)"
+            coords="205,829,221,829,266,813,273,780,246,731,221,722,189,730,180,740,205,790" shape="poly">
+        <area title="day21" data-img="assets/images/21.png" data-month="12" data-day="21" onclick="play(21)"
+            coords="985,311,990,371,964,406,909,435,848,470,821,486,858,507,934,518,1004,523,1067,523,1129,512,1182,482,1205,466,1156,446,1115,442,1079,420,1052,378,1049,314,1016,307"
+            shape="poly">
+        <area title="day22" data-img="assets/images/22.png" data-month="12" data-day="22" onclick="play(22)"
+            coords="412,772,452,783,475,774,486,748,463,694,436,683,383,691,368,723,387,761,391,776" shape="poly">
+        <area title="day23" data-img="assets/images/23.png" data-month="12" data-day="23" onclick="play(23)"
+            coords="1475,846,1422,816,1428,701,1454,602,1477,514,1501,613,1520,682,1523,773,1504,812" shape="poly">
+        <area title="day24" data-img="assets/images/24.png" data-month="12" data-day="24" onclick="play(24)"
+            coords="161,106,132,148,96,184,65,223,92,243,136,247,186,276,232,281,278,241,311,215,343,192,341,162,381,154,388,99,315,95,300,127,271,112,233,102,201,94"
+            shape="poly">
+    </map>
+
+    <canvas id="webgl"></canvas>
+    <button id="resetBtn">
+        Zurück
+    </button>
+
+    <script src="audio.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        imageMapResize();
+    </script>
+</body>
+
+</html>
