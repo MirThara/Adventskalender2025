@@ -13,31 +13,30 @@ function isDateReached(month, day) {
 }
 
 window.sounds = [
-    new Audio('assets/audio/Oogways Ascends.mp3'),
-    new Audio('assets/audio/We Were the Lucky Ones.mp3'),
-    new Audio('assets/audio/Never Forget.mp3'),
-    new Audio('assets/audio/French Library.mp3'),
-    new Audio('assets/audio/Experience Flwos In You.mp3'),
-    new Audio('assets/audio/Comptine d\'un autre été.mp3'),
-    new Audio('assets/audio/Sonata quasi una fantasia 1.Mvt.mp3'),
-    new Audio('assets/audio/An Old Friend.mp3'),
-    new Audio('assets/audio/Fly.mp3'),
-    new Audio('assets/audio/Una mattina.mp3'),
-    new Audio('assets/audio/Gladiator.mp3'),
-    new Audio('assets/audio/London Calling.mp3'),
-    new Audio('assets/audio/London Calling.mp3'),
-    new Audio('assets/audio/Lullaby.mp3'),
-    new Audio('assets/audio/Hijo de la luna.mp3'),
-    new Audio('assets/audio/Who you really are.mp3'),
-    new Audio('assets/audio/1ère Gymnopèdie.mp3'),
-    new Audio('assets/audio/1ère Gnossienne.mp3'),
-    new Audio('assets/audio/Pirates of the Caribbean.mp3'),
-    new Audio('assets/audio/La petite fille de la mer.mp3'),
-    new Audio('assets/audio/Picard.mp3'),
-    new Audio('assets/audio/Time.mp3'),
-    new Audio('assets/audio/Golden Hour.mp3'),
-    new Audio('assets/audio/Video Games.mp3'),
-    new Audio('assets/audio/Interstellar.mp3')
+    new Audio('./assets/audio/OogwaysAscends.mp3'),
+    new Audio('./assets/audio/WeWeretheLuckyOnes.mp3'),
+    new Audio('./assets/audio/NeverForget.mp3'),
+    new Audio('./assets/audio/FrenchLibrary.mp3'),
+    new Audio('./assets/audio/ExperienceFlwosInYou.mp3'),
+    new Audio('./assets/audio/ComptineD\'unAutreEte.mp3'),
+    new Audio('./assets/audio/Mondscheinsonate.mp3'),
+    new Audio('./assets/audio/AnOldFriend.mp3'),
+    new Audio('./assets/audio/Fly.mp3'),
+    new Audio('./assets/audio/UnaMattina.mp3'),
+    new Audio('./assets/audio/Gladiator.mp3'),
+    new Audio('./assets/audio/LondonCalling.mp3'),
+    new Audio('./assets/audio/Lullaby.mp3'),
+    new Audio('./assets/audio/HijoDeLaLuna.mp3'),
+    new Audio('./assets/audio/WhoYouReallyAre.mp3'),
+    new Audio('./assets/audio/1Gymnopedie.mp3'),
+    new Audio('./assets/audio/1Gnossienne.mp3'),
+    new Audio('./assets/audio/PiratesOfTheCaribbean.mp3'),
+    new Audio('./assets/audio/LaPetiteFilleDeLaMer.mp3'),
+    new Audio('./assets/audio/Picard.mp3'),
+    new Audio('./assets/audio/Time.mp3'),
+    new Audio('./assets/audio/GoldenHour.mp3'),
+    new Audio('./assets/audio/VideoGames.mp3'),
+    new Audio('./assets/audio/Interstellar.mp3')
 ];
 
 function stopAll() {
@@ -46,7 +45,6 @@ function stopAll() {
         audio.currentTime = 0; // zurückspulen
     });
 }
-
 
 function play(day) {
     const monthForDay = 12;
