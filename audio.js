@@ -13,8 +13,8 @@ function isDateReached(month, day) {
 }
 
 window.sounds = [
-    new Audio("https://github.com/MirThara/Adventskalender2025/releases/download/v1.0/Oogways_Ascends.mp3"),
-    new Audio("https://github.com/MirThara/Adventskalender2025/releases/download/v1.0/We_Were_the_Lucky_Ones.mp3"),
+    new Audio("https://github.com/MirThara/Adventskalender2025/releases/download/v1.0/OogwaysAscends.mp3"),
+    new Audio("https://github.com/MirThara/Adventskalender2025/releases/download/v1.0/WeWereTheLuckyOnes.mp3"),
     new Audio('./assets/audio/NeverForget.mp3'),
     new Audio('./assets/audio/FrenchLibrary.mp3'),
     new Audio('./assets/audio/ExperienceFlwosInYou.mp3'),
