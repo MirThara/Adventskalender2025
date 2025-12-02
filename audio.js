@@ -13,8 +13,8 @@ function isDateReached(month, day) {
 }
 
 window.sounds = [
-    new Audio("./assets/audio/OogwaysAscends.mp3"),
-    new Audio("./assets/audio/WeWereTheLuckyOnes.mp3"),
+    new Audio("https://mirthara.github.io/Adventskalender2025/assets/audio/OogwaysAscends.mp3"),
+    new Audio("https://mirthara.github.io/Adventskalender2025/assets/audio/WeWereTheLuckyOnes.mp3"),
     new Audio('./assets/audio/NeverForget.mp3'),
     new Audio('./assets/audio/FrenchLibrary.mp3'),
     new Audio('./assets/audio/ExperienceFlwosInYou.mp3'),
