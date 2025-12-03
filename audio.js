@@ -17,7 +17,7 @@ window.sounds = [
     new Audio("https://mirthara.github.io/Adventskalender2025/assets/audio/WeWereTheLuckyOnes.mp3"),
     new Audio('https://mirthara.github.io/Adventskalender2025/assets/audio/NeverForget.mp3'),
     new Audio('https://mirthara.github.io/Adventskalender2025/assets/audio/FrenchLibrary.mp3'),
-    new Audio('https://mirthara.github.io/Adventskalender2025/assets/audio/ExperienceFlwosInYou.mp3'),
+    new Audio('https://mirthara.github.io/Adventskalender2025/assets/audio/ExperienceFlowsInYou.mp3'),
     new Audio('https://mirthara.github.io/Adventskalender2025/assets/audio/ComptineD\'unAutreEte.mp3'),
     new Audio('https://mirthara.github.io/Adventskalender2025/assets/audio/Mondscheinsonate.mp3'),
     new Audio('https://mirthara.github.io/Adventskalender2025/assets/audio/AnOldFriend.mp3'),
